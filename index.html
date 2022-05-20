@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="mycss.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+
+  
+</head>
+<body>
+  <header>
+    <nav class="nav_bar">
+      <div class="logo">
+        <a href=""><img src="./slider_image/engineering.png" style="width: 50px; height: 50px;" alt=""></a>
+      </div>
+      <ul class="nav_list" id="nav-List">
+        <li class="list_item"><a href="">Home</a></li>
+        <li class="list_item"><a href="">Our Service</a></li>
+        <li class="list_item"><button type="button" class="btn btn-primary" id="button" onclick="formFunc()">Post A Skill</button></li>
+      </ul>
+      <div class="menu" id="toggle-Button">
+        <i class="material-icons" id="bar">&#xe8ee;</i>
+      </div>
+    </nav>
+    <div class="theme">
+      <h1>Fix-SPOT-4-ME</h1>
+      <p>Bring jobs to your door step</p>
+      <div class="go">
+          <a class="btn btn-primary" href="./posts.html" role="button">View Post</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="form_box">
+    <form action="/index.html?" method="get" class="form_pos" id="form-container">
+
+      <div><h3 class="text-center text-dark">CREATE ACCOUNT</h3></div>
+      <div class="error"></div>
+    
+      <div class="input_group">
+        <div class="d-flex justify-content-center icon-width">
+          <i class="fa fa-user"></i>
+        </div>
+        <input id="username" class="input" type="text" placeholder="Username">
+      </div>
+
+      <div class="input_group">
+        <div class="d-flex justify-content-center icon-width">
+          <i class="material-icons">&#xe163;</i>
+        </div>
+        <input id="email" class="input" type="email" placeholder="Email">
+      </div>
+    
+      <!-- <div class='pass'>
+        <div class="input_group1">
+          <div class="d-flex justify-content-center icon-width1">
+            <i class="material-icons">&#xe897;</i>
+          </div>
+          <input id="password1" value="" type="password" placeholder="Password">
+        </div>
+
+        <div class="d-flex justify-content-center icon-width group">
+          <i class="fa fa-eye"></i>
+        </div>
+      </div> -->
+      
+      <div class='pass'>
+        <div class="input_group1">
+          <div class="d-flex justify-content-center icon-width1">
+            <i class="material-icons">&#xe897;</i>
+          </div>
+          <input type="password" name="ConfirmPassword" placeholder="Confirm Password">
+        </div>
+
+        <div class="d-flex justify-content-center icon-width group">
+          <i onclick="icon2()" id="font" class="fa fa-eye"></i>
+        </div>
+      </div>
+    
+      <div class="radio">
+        <div class="radios">
+            <input type="radio" name="radiobox" id="male" value='male'>
+            <label for="male">Male</label>
+        </div>
+    
+        <div class="radios">
+            <input type="radio" name="radiobox" id="female" value='female'>
+            <label for="female">Female</label>
+        </div>
+      </div>
+      <button class="submit" type="submit">Submit form</button>
+    </form>
+  </div>
+  <section class="row gx-3">
+    <div class="col-md-6 px-5">
+      <div class="row">
+        <div class="About">
+          <div class="words">
+            <span class="text-dark">ABOUT</span class="text-dark">
+            <span class="text-dark">US</span class="text-dark">
+          </div> 
+        </div>
+        <p>Fix-SPOT-4-ME is an engineering website where technicians, engineers, contractors and clients intracts with each others. This website is medium where technicians and technologist post their skills and employes and develop young enterprising engineers.</p>
+        <p>Fix-SPOT-4-ME award contracts to its registered users. Fix-SPOT-4-ME users must have CAC registeration number or any form of identification from the government</p>
+      </div>
+
+      <div class="row">
+        <div class="About">
+          <div class="words">
+            <span class="text-dark">CONTACT</span class="text-dark">
+            <span class="text-dark">US</span class="text-dark">
+          </div> 
+        </div>
+        <address>
+          <pre>visit us at: Ikeja, Lagos, Nigeria</pre>
+          <pre>Email us at: fix-spot-4-me.org</pre>
+          <pre>contact us on: (+234)-123-456-7890</pre>
+        </address>
+      </div>
+
+      <div class="row">
+        <div class="About">
+          <div class="words">
+            <span class="text-dark">FOLLOW</span class="text-dark">
+            <span class="text-dark">US ON</span class="text-dark">
+          </div> 
+        </div>
+        <div class="social">
+          <a href="">FACEBOOK</a>
+          <a href="">TWITTER</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <img src="./slider_image/young-male-engineer-green-hardhat-reading-notes-white-background-high-quality-photo_114579-41610.jpg" alt="">
+    </div>
+  </div>
+  </section>
+
+
+  <script src="./bootstrap.bundle.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

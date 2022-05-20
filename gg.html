@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Password Visibility</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form method="post">
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+            </p>
+            <button type="submit" id="submit" class="submit">Log In</button>
+        </form>
+    </div>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+// Show form
+  formFunc=()=> {
+    var x = document.getElementById("form-container");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+    //Bar Icon Toggler
+    const toggleButton= document.getElementById('toggle-Button');
+    const navList= document.getElementById('nav-List');
+
+    toggleButton.addEventListener('click', ()=>{
+      navList.classList.toggle('show');
+    })
+
+
+
+
+  const visibilityBtn=document.getElementById("visibilityBtn")
+
+  visibilityBtn.addEventListener("click", toggleVisibility)
+  function toggleVisibility() {
+    const passwordImport=document.getElementById("password2")
+    const icon=document.getElementById("icon")
+
+    if(passwordImport.type=== "password") {
+    passwordImport.type= "text";
+    icon.classList.toggle("fa-eye-slash")
+    } else{
+      passwordImport.type= "password";
+      icon.classList.toggle("fa-eye")
+    }
+  }
+
+  // // Change eye icon and make password visible and invisible
+  // function myFunction(x) {
+  //   // Change eye icon
+  //   x.classList.toggle("fa-eye-slash");
+
+  //   // To make password visible and invisible for 1st
+  //   var x=document.getElementById("password1");
+  //   if(x.type=== "password1") {
+  //     x.type= "type";
+  //   }
+
+  //   // To make password visible and invisible for 2nd
+  //   var x=document.getElementById("password2");
+  //   if(x.type=== "password") {
+  //     x.type= "type";
+  //   }
+  // }
+
+  
+
+  // form validation
+  
+    
+
+
+
+
+  // // Change eye icon and make password visible and invisible
+  // function myFunction(x) {
+  //   // Change eye icon
+  //   x.classList.toggle("fa-eye-slash");
+
+  //   // To make password visible and invisible for 1st
+  //   var x=document.getElementById("password1");
+  //   if(x.type=== "password1") {
+  //     x.type= "type";
+  //   }
+
+  //   // To make password visible and invisible for 2nd
+  //   var x=document.getElementById("password2");
+  //   if(x.type=== "password") {
+  //     x.type= "type";
+  //   }
+  // }
+
+  
+
+  // form validation 
+  const username=document.getElementById('username');
+  const email=document.getElementById('email');
+  const form = document.getElementById('form-container');
+  const errorElement = document.getElementById('error');
+  form.addEventListener('submit', (e)=>{
+    let messages=[]
+    if(username.value===null || username.value===null) {
+      messages.push('username is Required')
+    }
+
+    if(messages.value.length <= 6) {
+      messages.push('Password must be longer than 6 characters')
+    }
+
+    if(messages > 0) {
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }
+    
+  })
+  </script>
+
+</body>
+</html>
+
+
+      
+    
+    
+    <!-- <div class="topnav" id="myTopnav">
+
+      <i class="material-icons">&#xe897;</i>lock
+      <i class="material-icons">&#xe8f4;</i>eye
+      <i class="material-icons">&#xe8f5;</i>no eye
+      <i class="material-icons">&#xe163;</i>tel
+          <a href=""><img src="./slider_image/Vasiti.png" alt=""></a>
+          <a style="padding-top: 20px;" href="#news">News</a>
+          <a style="padding-top: 20px;" href="#contact">Contact</a>
+          <a style="padding-top: 20px;" href="#about">About</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div> -->
